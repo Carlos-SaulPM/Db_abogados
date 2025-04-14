@@ -24,14 +24,14 @@ PRIMARY KEY(id_ecl)
 CREATE TABLE contacto(
 id_cto    INT NOT NULL AUTO_INCREMENT,
 telefono  VARCHAR(12) NOT NULL UNIQUE,
-correo    VARCHAR(15) NOT NULL UNIQUE,
+correo    VARCHAR(30) NOT NULL UNIQUE,
 celular   VARCHAR(10) NOT NULL UNIQUE,
 PRIMARY KEY(id_cto)
 );
 
 CREATE TABLE especialidad(
 id_epd        INT NOT NULL AUTO_INCREMENT,
-especialidad  VARCHAR(21) NOT NULL,
+especialidad  VARCHAR(30) NOT NULL,
 cedula        VARCHAR(15) NOT NULL,
 PRIMARY KEY(id_epd)
 );
