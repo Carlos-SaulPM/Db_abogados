@@ -87,20 +87,20 @@ CONSTRAINT fk_procurador_cto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
 ); 
 
 CREATE TABLE cliente(
-id_cte            INT NOT NULL AUTO_INCREMENT,
-dni               VARCHAR(20) NOT NULL UNIQUE,
-nombre            VARCHAR(20) NOT NULL,
-apellido_paterno  VARCHAR(20) NOT NULL,
-apellido_materno  VARCHAR(20) NOT NULL,
-fecha_nacimiento  DATE NOT NULL,
-sexo              BOOLEAN NOT NULL,
-id_drn            INT NOT NULL,
-id_ecl            INT NOT NULL,
-id_cto            INT NOT NULL,
-PRIMARY KEY(id_cte, id_drn, id_cto),
-CONSTRAINT fk_cliente_direccion FOREIGN KEY(id_drn) REFERENCES direccion(id_drn),
-CONSTRAINT fk_cliente_estado_civil FOREIGN KEY(id_ecl) REFERENCES estado_civil(id_ecl),
-CONSTRAINT fk_cliente_contacto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
+  id_cte            INT NOT NULL AUTO_INCREMENT,
+  dni               VARCHAR(20) NOT NULL UNIQUE,
+  nombre            VARCHAR(20) NOT NULL,
+  apellido_paterno  VARCHAR(20) NOT NULL,
+  apellido_materno  VARCHAR(20) NOT NULL,
+  fecha_nacimiento  DATE NOT NULL,
+  sexo              BOOLEAN NOT NULL,
+  id_drn            INT NOT NULL,
+  id_ecl            INT NOT NULL,
+  id_cto            INT NOT NULL,
+  PRIMARY KEY(id_cte, id_drn, id_cto),
+  CONSTRAINT fk_cliente_direccion FOREIGN KEY(id_drn) REFERENCES direccion(id_drn),
+  CONSTRAINT fk_cliente_estado_civil FOREIGN KEY(id_ecl) REFERENCES estado_civil(id_ecl),
+  CONSTRAINT fk_cliente_contacto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
 );
 
 CREATE TABLE expediente(

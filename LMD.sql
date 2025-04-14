@@ -140,32 +140,30 @@ VALUES
 ('Francisco', 'Cruz', 'Martínez', 9, 9, 9),
 ('Verónica', 'Ramírez', 'Lopez', 10, 10, 10);
 
-
 INSERT INTO procurador(nombre, apellido_paterno, apellido_materno, id_drn, id_epd, id_cto)
 VALUES
-('Eduardo', 'González', 'Hernández', 1, 1, 1),
-('Verónica', 'Martínez', 'Ruiz', 2, 2, 2),
-('Carlos', 'Rodríguez', 'Gómez', 3, 3, 3),
-('Raúl', 'Sánchez', 'González', 4, 4, 4),
-('Laura', 'Pérez', 'Torres', 5, 5, 5),
-('Ricardo', 'Fernández', 'López', 6, 6, 6),
-('Ángel', 'Ramírez', 'Serrano', 7, 7, 7),
-('Carla', 'Ruiz', 'López', 8, 8, 8),
-('Manuel', 'Cruz', 'Martínez', 9, 9, 9),
-('José', 'Gutiérrez', 'Rodríguez', 10, 10, 10);
+('Eduardo', 'González', 'Hernández', 11, 1, 11),
+('Verónica', 'Martínez', 'Ruiz', 12, 2, 12),
+('Carlos', 'Rodríguez', 'Gómez', 13, 3, 13),
+('Raúl', 'Sánchez', 'González', 14, 4, 14),
+('Laura', 'Pérez', 'Torres', 15, 5, 15),
+('Ricardo', 'Fernández', 'López', 16, 6, 16),
+('Ángel', 'Ramírez', 'Serrano', 17, 7, 17),
+('Carla', 'Ruiz', 'López', 18, 8, 18),
+('Manuel', 'Cruz', 'Martínez', 19, 9, 19),
+('José', 'Gutiérrez', 'Rodríguez', 20, 10, 20);
 
 
-INSERT INTO cliente(nombre, apellido_paterno, apellido_materno, id_drn, id_cto, dni)
+INSERT INTO cliente(dni, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, id_drn, id_ecl, id_cto)
 VALUES
-('Pedro', 'Jiménez', 'López', 1, 1, '12345678A'),
-('José', 'Hernández', 'Pérez', 2, 2, '23456789B'),
-('Lorena', 'Sánchez', 'Martínez', 3, 3, '34567890C'),
-('Marta', 'González', 'López', 4, 4, '45678901D'),
-('Carlos', 'Mendoza', 'Torres', 5, 5, '56789012E'),
-('Sandra', 'Jiménez', 'Gómez', 6, 6, '67890123F'),
-('Ricardo', 'Serrano', 'Pérez', 7, 7, '78901234G'),
-('Luis', 'Ramírez', 'Torres', 8, 8, '89012345H'),
-('Raúl', 'Pérez', 'Sánchez', 9, 9, '90123456I'),
-('Gabriela', 'González', 'Fernández', 10, 10, '01234567J');
-
+('12345678A', 'Pedro', 'Jiménez', 'López', '1990-01-01', TRUE, 1, 1, 1),
+('23456789B', 'José', 'Hernández', 'Pérez', '1985-02-14', FALSE, 2, 2, 2),
+('34567890C', 'Lorena', 'Sánchez', 'Martínez', '1992-05-30', FALSE, 3, 3, 3),
+('45678901D', 'Marta', 'González', 'López', '1988-09-15', FALSE, 4, 4, 4),
+('56789012E', 'Carlos', 'Mendoza', 'Torres', '1980-11-25', TRUE, 5, 5, 5),
+('67890123F', 'Sandra', 'Jiménez', 'Gómez', '1995-07-10', FALSE, 6, 6, 6),
+('78901234G', 'Ricardo', 'Serrano', 'Pérez', '1991-03-20', TRUE, 7, 1, 7),
+('89012345H', 'Luis', 'Ramírez', 'Torres', '1987-06-05', TRUE, 8, 2, 8),
+('90123456I', 'Raúl', 'Pérez', 'Sánchez', '1993-12-12', TRUE, 9, 3, 9),
+('01234567J', 'Gabriela', 'González', 'Fernández', '1984-10-18', FALSE, 10, 4, 10);
 
