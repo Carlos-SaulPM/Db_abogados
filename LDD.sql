@@ -24,7 +24,7 @@ PRIMARY KEY(id_ecl)
 CREATE TABLE contacto(
 id_cto    INT NOT NULL AUTO_INCREMENT,
 telefono  VARCHAR(12) NOT NULL UNIQUE,
-correo    VARCHAR(15) NOT NULL UNIQUE,
+correo    VARCHAR(30) NOT NULL UNIQUE,
 celular   VARCHAR(10) NOT NULL UNIQUE,
 PRIMARY KEY(id_cto)
 );
@@ -38,8 +38,8 @@ PRIMARY KEY(id_epd)
 
 CREATE TABLE codigo_postal(
 codigo_postal     VARCHAR(10) NOT NULL,
-asentamiento      VARCHAR(30) NOT NULL,
-tipo_asentamiento VARCHAR(30) NOT NULL,
+asentamiento      VARCHAR(50) NOT NULL,
+tipo_asentamiento VARCHAR(50) NOT NULL,
 municipio         VARCHAR(30) NOT NULL,
 estado            VARCHAR(30) NOT NULL,
 ciudad            VARCHAR(30) NOT NULL,
@@ -60,9 +60,9 @@ CONSTRAINT fk_direccion_codigo_postal FOREIGN KEY(codigo_postal) REFERENCES codi
 
 CREATE TABLE abogado(
 id_abo            INT NOT NULL AUTO_INCREMENT,
-nombre            VARCHAR(25) NOT NULL,
-apellido_paterno  VARCHAR(25) NOT NULL,
-apellido_materno  VARCHAR(25) NOT NULL,
+nombre            VARCHAR(20) NOT NULL,
+apellido_paterno  VARCHAR(20) NOT NULL,
+apellido_materno  VARCHAR(20) NOT NULL,
 id_drn            INT NOT NULL,
 id_epd            INT NOT NULL,
 id_cto            INT NOT NULL,
@@ -74,9 +74,9 @@ CONSTRAINT fk_abogado_cto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
 
 CREATE TABLE procurador(
 id_pcr            INT NOT NULL AUTO_INCREMENT,
-nombre            VARCHAR(25) NOT NULL,
-apellido_paterno  VARCHAR(25) NOT NULL,
-apellido_materno  VARCHAR(25) NOT NULL,
+nombre            VARCHAR(20) NOT NULL,
+apellido_paterno  VARCHAR(20) NOT NULL,
+apellido_materno  VARCHAR(20) NOT NULL,
 id_drn            INT NOT NULL,
 id_epd            INT NOT NULL,
 id_cto            INT NOT NULL,
@@ -87,28 +87,28 @@ CONSTRAINT fk_procurador_cto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
 ); 
 
 CREATE TABLE cliente(
-id_cte            INT NOT NULL AUTO_INCREMENT,
-dni               VARCHAR(20) NOT NULL UNIQUE,
-nombre            VARCHAR(25) NOT NULL,
-apellido_paterno  VARCHAR(25) NOT NULL,
-apellido_materno  VARCHAR(25) NOT NULL,
-fecha_nacimiento  DATE NOT NULL,
-sexo              BOOLEAN NOT NULL,
-id_drn            INT NOT NULL,
-id_ecl            INT NOT NULL,
-id_cto            INT NOT NULL,
-PRIMARY KEY(id_cte, id_drn, id_cto),
-CONSTRAINT fk_cliente_direccion FOREIGN KEY(id_drn) REFERENCES direccion(id_drn),
-CONSTRAINT fk_cliente_estado_civil FOREIGN KEY(id_ecl) REFERENCES estado_civil(id_ecl),
-CONSTRAINT fk_cliente_contacto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
+  id_cte            INT NOT NULL AUTO_INCREMENT,
+  dni               VARCHAR(20) NOT NULL UNIQUE,
+  nombre            VARCHAR(20) NOT NULL,
+  apellido_paterno  VARCHAR(20) NOT NULL,
+  apellido_materno  VARCHAR(20) NOT NULL,
+  fecha_nacimiento  DATE NOT NULL,
+  sexo              BOOLEAN NOT NULL,
+  id_drn            INT NOT NULL,
+  id_ecl            INT NOT NULL,
+  id_cto            INT NOT NULL,
+  PRIMARY KEY(id_cte, id_drn, id_cto),
+  CONSTRAINT fk_cliente_direccion FOREIGN KEY(id_drn) REFERENCES direccion(id_drn),
+  CONSTRAINT fk_cliente_estado_civil FOREIGN KEY(id_ecl) REFERENCES estado_civil(id_ecl),
+  CONSTRAINT fk_cliente_contacto FOREIGN KEY(id_cto) REFERENCES contacto(id_cto)
 );
 
 CREATE TABLE expediente(
 id_epe                        INT NOT NULL AUTO_INCREMENT,
-asunto                        VARCHAR(30) NOT NULL,
+asunto                        VARCHAR(35) NOT NULL,
 tipo_participacion_cliente    VARCHAR(15) NOT NULL,
 fecha_inicio                  DATETIME NOT NULL,
-fecha_fin                     DATETIME NOT NULL,
+fecha_fin                     DATETIME,
 id_cte                        INT NOT NULL,
 id_tco                        INT NOT NULL,
 PRIMARY KEY(id_epe),
@@ -121,7 +121,7 @@ id_epe      INT NOT NULL,
 id_eto      INT NOT NULL,
 fecha       DATE NOT NULL,
 hora        TIME NOT NULL,
-observacion VARCHAR(35),
+observacion VARCHAR(50),
 PRIMARY KEY(id_epe, id_eto),
 CONSTRAINT fk_expediente_estado_expediente FOREIGN KEY(id_epe) REFERENCES expediente(id_epe),
 CONSTRAINT fk_expediente_estado_estado FOREIGN KEY(id_eto) REFERENCES estado(id_eto)
