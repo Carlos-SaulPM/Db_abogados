@@ -31,7 +31,7 @@ PRIMARY KEY(id_cto)
 
 CREATE TABLE especialidad(
 id_epd        INT NOT NULL AUTO_INCREMENT,
-especialidad  VARCHAR(30) NOT NULL,
+especialidad  VARCHAR(21) NOT NULL,
 cedula        VARCHAR(15) NOT NULL,
 PRIMARY KEY(id_epd)
 );
