@@ -128,29 +128,29 @@ CONSTRAINT fk_expediente_estado_estado FOREIGN KEY(id_eto) REFERENCES estado(id_
 );
 
 CREATE TABLE abogado_expediente(
-id_aee            INT NOT NULL AUTO_INCREMENT,
-id_epe            INT NOT NULL,
-id_abo            INT NOT NULL,
-fecha_asignacion  DATE NOT NULL,
-hora_asignacion   TIME NOT NULL,
-fecha_termino     DATE NOT NULL,
-hora_termino      TIME NOT NULL,
-observaciones     VARCHAR(30),
-PRIMARY KEY(id_aee, id_epe, id_abo),
-CONSTRAINT fk_abogado_expediente_expediente FOREIGN KEY(id_epe) REFERENCES expediente(id_epe),
-CONSTRAINT fk_abogado_expediente_abogado FOREIGN KEY(id_abo) REFERENCES abogado(id_abo)
+  id_aee            INT NOT NULL AUTO_INCREMENT,
+  id_epe            INT NOT NULL,
+  id_abo            INT NOT NULL,
+  fecha_asignacion  DATE NOT NULL,
+  hora_asignacion   TIME NOT NULL,
+  fecha_termino     DATE,
+  hora_termino      TIME,
+  observaciones     VARCHAR(30),
+  PRIMARY KEY(id_aee, id_epe, id_abo),
+  CONSTRAINT fk_abogado_expediente_expediente FOREIGN KEY(id_epe) REFERENCES expediente(id_epe),
+  CONSTRAINT fk_abogado_expediente_abogado FOREIGN KEY(id_abo) REFERENCES abogado(id_abo)
 );
 
 CREATE TABLE procurador_expediente(
-id_pee            INT NOT NULL AUTO_INCREMENT,
-id_epe            INT NOT NULL,
-id_pcr            INT NOT NULL,
-fecha_asignacion  DATE NOT NULL,
-hora_asignacion   TIME NOT NULL,
-fecha_termino     DATE NOT NULL,
-hora_termino      TIME NOT NULL,
-observaciones     VARCHAR(30),
-PRIMARY KEY(id_pee, id_epe, id_pcr),
-CONSTRAINT fk_procurador_expediente_expediente FOREIGN KEY(id_epe) REFERENCES expediente(id_epe),
-CONSTRAINT fk_procurador_expediente_procurador FOREIGN KEY(id_pcr) REFERENCES procurador(id_pcr)
+  id_pee            INT NOT NULL AUTO_INCREMENT,
+  id_epe            INT NOT NULL,
+  id_pcr            INT NOT NULL,
+  fecha_asignacion  DATE NOT NULL,
+  hora_asignacion   TIME NOT NULL,
+  fecha_termino     DATE,
+  hora_termino      TIME,
+  observaciones     VARCHAR(30),
+  PRIMARY KEY(id_pee, id_epe, id_pcr),
+  CONSTRAINT fk_procurador_expediente_expediente FOREIGN KEY(id_epe) REFERENCES expediente(id_epe),
+  CONSTRAINT fk_procurador_expediente_procurador FOREIGN KEY(id_pcr) REFERENCES procurador(id_pcr)
 );
