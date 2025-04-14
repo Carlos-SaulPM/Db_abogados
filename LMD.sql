@@ -75,6 +75,20 @@ pais              VARCHAR(30) NOT NULL,
 PRIMARY KEY(codigo_postal)
 );
 
+INSERT INTO codigo_postal(codigo_postal, asentamiento, tipo_asentamiento, municipio, estado, ciudad, pais) 
+VALUES
+('01000', 'San Ángel', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01010', 'Los Alpes', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01020', 'Guadalupe Inn', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01030', 'Axotla', 'Pueblo', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01040', 'Campestre', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01049', 'Tlacopac', 'Pueblo', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01050', 'Ex-Hacienda de Guadalupe Chimalistac', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01060', 'Altavista', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01070', 'Chimalistac', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
+('01080', 'Progreso Tizapan', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico');
+
+
 CREATE TABLE direccion(
 id_drn            INT NOT NULL AUTO_INCREMENT,
 codigo_postal     VARCHAR(10) NOT NULL,
