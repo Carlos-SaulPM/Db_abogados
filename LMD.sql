@@ -22,76 +22,6 @@ VALUES
 ('En Ejecucion');
 
 
-INSERT INTO estado_civil(nombre)
-VALUES 
-('Soltero/a'), 
-('Casado/a'), 
-('Union Libre'), 
-('Separado/a'), 
-('Divorciado/a'), 
-('Viudo/a');
-
-
-INSERT INTO contacto(telefono, correo, celular)
-VALUES
-('5578946512', 'abogado1@gmail.com', '5587965434'),
-('5578946712', 'abogado2@gmail.com', '5687965234'),
-('5578946312', 'abogado3@gmail.com', '5787965234'),
-('5578946762', 'abogado4@gmail.com', '5687965244'),
-('5578956712', 'abogado5@gmail.com', '5687955234'),
-('5558946712', 'abogado6@gmail.com', '5687965284'),
-('5558946713', 'abogado7@gmail.com', '5687965285'),
-('5558946714', 'abogado8@gmail.com', '5687965286'),
-('5558946715', 'abogado9@gmail.com', '5687965287'),
-('5558946716', 'abogado10@gmail.com', '5687965288'),
-('5558946717', 'procurador1@gmail.com', '5687965289'),
-('5558946718', 'procurador2@gmail.com', '5687965290'),
-('5558946719', 'procurador3@gmail.com', '5687965291'),
-('5558946720', 'procurador4@gmail.com', '5687965292'),
-('5558946721', 'procurador5@gmail.com', '5687965293'),
-('5558946722', 'procurador6@gmail.com', '5687965294'),
-('5558946723', 'procurador7@gmail.com', '5687965295'),
-('5558946724', 'procurador8@gmail.com', '5687965296'),
-('5558946725', 'procurador9@gmail.com', '5687965297'),
-('5558946726', 'procurador10@gmail.com', '5687965298'),
-('5558946727', 'cliente1@gmail.com', '5687965299'),
-('5558946728', 'cliente2@gmail.com', '5687965300'),
-('5558946729', 'cliente3@gmail.com', '5687965301'),
-('5558946730', 'cliente4@gmail.com', '5687965302'),
-('5558946731', 'cliente5@gmail.com', '5687965303'),
-('5558946732', 'cliente6@gmail.com', '5687965304'),
-('5558946733', 'cliente7@gmail.com', '5687965305'),
-('5558946734', 'cliente8@gmail.com', '5687965306'),
-('5558946735', 'cliente9@gmail.com', '5687965307'),
-('5558946736', 'cliente10@gmail.com', '5687965308');
-
-
-
-INSERT INTO especialidad(especialidad, cedula) 
-VALUES
-('Derecho Familiar', 'ABO001'),
-('Derecho Penal', 'ABO002'),
-('Derecho Civil', 'ABO003'),
-('Derecho Laboral', 'ABO004'),
-('Derecho Corporativo', 'ABO005'),
-('Derecho Administrativo', 'ABO006'),
-('Derecho Constitucional', 'ABO007'),
-('Derecho Fiscal', 'ABO008'),
-('Derecho Mercantil', 'ABO009'),
-('Derecho Internacional', 'ABO010'),
-
-('Derecho Familiar', 'PRO001'),
-('Derecho Penal', 'PRO002'),
-('Derecho Civil', 'PRO003'),
-('Derecho Laboral', 'PRO004'),
-('Derecho Corporativo', 'PRO005'),
-('Derecho Administrativo', 'PRO006'),
-('Derecho Constitucional', 'PRO007'),
-('Derecho Fiscal', 'PRO008'),
-('Derecho Mercantil', 'PRO009'),
-('Derecho Internacional', 'PRO010');
-
-
 INSERT INTO codigo_postal(codigo_postal, asentamiento, tipo_asentamiento, municipio, estado, ciudad, pais) 
 VALUES
 ('01000', 'San Ángel', 'Colonia', 'Álvaro Obregón', 'Ciudad de México', 'Ciudad de México', 'Mexico'),
@@ -140,45 +70,45 @@ VALUES
 ('01080', 'Calle Chihuahua', '78', NULL, 'Frente a clínica');
 
 
-INSERT INTO abogado(nombre, apellido_paterno, apellido_materno, id_drn, id_epd, id_cto)
+INSERT INTO abogado(nombre, apellido_paterno, apellido_materno, id_drn, telefono, correo)
 VALUES
-('Juan', 'Pérez', 'Gómez', 1, 1, 1  ),
-('María', 'López', 'García', 2, 2, 2),
-('Carlos', 'Martínez', 'Sánchez', 3, 3, 3),
-('Ana', 'González', 'Hernández', 4, 4, 4),
-('Luis', 'Rodríguez', 'Martínez', 5, 5, 5),
-('Patricia', 'Torres', 'Vázquez', 6, 6, 6),
-('Ricardo', 'Gutiérrez', 'Jiménez', 7, 7, 7),
-('Isabel', 'Ruiz', 'Fernández', 8, 8, 8),
-('Francisco', 'Cruz', 'Martínez', 9, 9, 9),
-('Verónica', 'Ramírez', 'Lopez', 10, 10, 10);
+('Juan', 'Pérez', 'Gómez', 1,'5578946512', 'abogado1@gmail.com' ),
+('María', 'López', 'García', 2,'5578946712', 'abogado2@gmail.com'),
+('Carlos', 'Martínez', 'Sánchez', 3,'5578946312', 'abogado3@gmail.com'),
+('Ana', 'González', 'Hernández', 4, '5578946762', 'abogado4@gmail.com'),
+('Luis', 'Rodríguez', 'Martínez', 5, '5578956712', 'abogado5@gmail.com'),
+('Patricia', 'Torres', 'Vázquez', 6, '5558946712', 'abogado6@gmail.com'),
+('Ricardo', 'Gutiérrez', 'Jiménez', 7, '5558946713', 'abogado7@gmail.com'),
+('Isabel', 'Ruiz', 'Fernández', 8, '5558946714', 'abogado8@gmail.com'),
+('Francisco', 'Cruz', 'Martínez', 9, '5558946715', 'abogado9@gmail.com'),
+('Verónica', 'Ramírez', 'Lopez', 10, '5558946716', 'abogado10@gmail.com');
 
-INSERT INTO procurador(nombre, apellido_paterno, apellido_materno, id_drn, id_epd, id_cto)
+INSERT INTO procurador(nombre, apellido_paterno, apellido_materno, id_drn)
 VALUES
-('Eduardo', 'González', 'Hernández', 11, 11, 11),
-('Verónica', 'Martínez', 'Ruiz', 12, 12, 12),
-('Carlos', 'Rodríguez', 'Gómez', 13, 13, 13),
-('Raúl', 'Sánchez', 'González', 14, 14, 14),
-('Laura', 'Pérez', 'Torres', 15, 15, 15),
-('Ricardo', 'Fernández', 'López', 16, 16, 16),
-('Ángel', 'Ramírez', 'Serrano', 17, 17, 17),
-('Carla', 'Ruiz', 'López', 18, 18, 18),
-('Manuel', 'Cruz', 'Martínez', 19, 19, 19),
-('José', 'Gutiérrez', 'Rodríguez', 20, 20, 20);
+('Eduardo', 'González', 'Hernández', 11),
+('Verónica', 'Martínez', 'Ruiz', 12),
+('Carlos', 'Rodríguez', 'Gómez', 13),
+('Raúl', 'Sánchez', 'González', 14),
+('Laura', 'Pérez', 'Torres', 15),
+('Ricardo', 'Fernández', 'López', 16),
+('Ángel', 'Ramírez', 'Serrano', 17),
+('Carla', 'Ruiz', 'López', 18),
+('Manuel', 'Cruz', 'Martínez', 19),
+('José', 'Gutiérrez', 'Rodríguez', 20);
 
 
-INSERT INTO cliente(dni, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, id_drn, id_ecl, id_cto)
+INSERT INTO cliente(dni, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, id_drn, telefono, correo)
 VALUES
-('12345678A', 'Pedro', 'Jiménez', 'López', '1990-01-01', TRUE, 21, 1, 21),
-('23456789B', 'José', 'Hernández', 'Pérez', '1985-02-14', TRUE, 22, 2, 22),
-('34567890C', 'Lorena', 'Sánchez', 'Martínez', '1992-05-30', FALSE, 23, 3, 23),
-('45678901D', 'Marta', 'González', 'López', '1988-09-15', FALSE, 24, 4, 24),
-('56789012E', 'Carlos', 'Mendoza', 'Torres', '1980-11-25', TRUE, 25, 5, 25),
-('67890123F', 'Sandra', 'Jiménez', 'Gómez', '1995-07-10', FALSE, 26, 6, 26),
-('78901234G', 'Ricardo', 'Serrano', 'Pérez', '1991-03-20', TRUE, 27, 1, 27),
-('89012345H', 'Luis', 'Ramírez', 'Torres', '1987-06-05', TRUE, 28, 2, 28),
-('90123456I', 'Raúl', 'Pérez', 'Sánchez', '1993-12-12', TRUE, 29, 3, 29),
-('01234567J', 'Gabriela', 'González', 'Fernández', '1984-10-18', FALSE, 30, 4, 30);
+('12345678A', 'Pedro', 'Jiménez', 'López', '1990-01-01', TRUE, 21,'5558946727', 'cliente1@gmail.com' ),
+('23456789B', 'José', 'Hernández', 'Pérez', '1985-02-14', TRUE, 22,'5558946728', 'cliente2@gmail.com' ),
+('34567890C', 'Lorena', 'Sánchez', 'Martínez', '1992-05-30', FALSE, 23,'5558946729', 'cliente3@gmail.com'),
+('45678901D', 'Marta', 'González', 'López', '1988-09-15', FALSE, 24,'5558946730', 'cliente4@gmail.com'),
+('56789012E', 'Carlos', 'Mendoza', 'Torres', '1980-11-25', TRUE, 25,'5558946731', 'cliente5@gmail.com'),
+('67890123F', 'Sandra', 'Jiménez', 'Gómez', '1995-07-10', FALSE, 26,'5558946732', 'cliente6@gmail.com'),
+('78901234G', 'Ricardo', 'Serrano', 'Pérez', '1991-03-20', TRUE, 27,'5558946733', 'cliente7@gmail.com'),
+('89012345H', 'Luis', 'Ramírez', 'Torres', '1987-06-05', TRUE, 28,'5558946734', 'cliente8@gmail.com'),
+('90123456I', 'Raúl', 'Pérez', 'Sánchez', '1993-12-12', TRUE, 29,'5558946735', 'cliente9@gmail.com'),
+('01234567J', 'Gabriela', 'González', 'Fernández', '1984-10-18', FALSE, 30,'5558946736', 'cliente10@gmail.com');
 
 INSERT INTO expediente(asunto, tipo_participacion_cliente, fecha_inicio, fecha_fin, id_cte, id_tco)
 VALUES
